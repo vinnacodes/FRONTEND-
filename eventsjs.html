@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <label for=""> type something here</label>
+    <input type="text" id="box" onkeydown="typing()" />
+
+    <div>
+      <label style="position: relative; left: 400px" for=""
+        >you ill see here</label
+      >
+
+      <p id="op" style="position: relative; left: 400px"></p>
+    </div>
+
+    <script>
+      function typing() {
+        let inp1 = document.getElementById("box").value;
+        let op1 = document.getElementById("op");
+
+        
+        return (op1.innerHTML = inp1);
+      }
+    </script>
+  </body>
+</html>
