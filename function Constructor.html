@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Constructor</title>
+  </head>
+  <body>
+    <!-- // Create a "Product" Object with 
+    Properties: 
+    1. Name
+    2. Price
+    Method:
+    Discount()
+    
+    Output:
+    console.log(product1.name); 
+    // Output: Laptop
+    console.log(product2.price); 
+    // Output: 500
+    console.log(product1.Discount(10)); 
+    // Output: 900 (10% discount)
+    console.log(product2.Discount(20)); 
+    // Output: 400 (20% discount) -->
+
+    <script>
+      function Product(name, price) {
+        this.name = name;
+        this.price = price;
+      }
+
+      Product.prototype.Discount = function (dis) {
+        return (
+          this.price - (this.price * dis) / 100 + " (" + dis + "% Discount)"
+        );
+      };
+      const product1 = new Product("laptop", 1000);
+      const product2 = new Product("iphone", 500);
+      console.log(product1.name);
+      console.log(product2.price);
+      console.log(product1);
+      console.log(product2);
+
+      console.log(product1.Discount(10));
+      console.log(product2.Discount(20));
+    </script>
+  </body>
+</html>
