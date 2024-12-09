@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Task: Create a BankAccount Class
+
+    Objective:
+    
+    1. Create a BankAccount class with properties: accountNumber, accountHolder, and balance.
+    
+    
+    2. Use a constructor to initialize these properties.
+    
+    
+    3. Add methods:
+    
+    deposit(amount) - Increases the balance.
+    
+    withdraw(amount) - Decreases the balance if funds are sufficient.
+    
+    getAccountInfo() - Logs account details. -->
+    <script>
+      // creating the bank Account class
+
+      class BankAccount {
+        constructor(accountNumber, AccountHolder, balance) {
+          this.accountNumber = accountNumber;
+          this.AccountHolder = AccountHolder;
+          this.balance = balance;
+        }
+
+        deposit(amount) {
+          this.balance = this.amount + this.balance;
+
+          return `your balance is ${this.balance}`;
+        }
+
+        // withdraw
+        withdraw(amount) {
+          if (this.balance - amount >= 500) {
+            this.balance = this.balance - amount;
+
+            return `you have withdrawed  rs ${amount}and your balance is ${this.balance}`;
+          }
+          return "your are having insufficient funds";
+        }
+
+        getaccountinfo() {
+          return ` your account number is ${this.AccountNumber} 
+           accountHolder name is ${this.AccountHolder}
+           your account balance is ${this.balance}`;
+        }
+      }
+
+      // creating the customers ;
+
+      const b1 = new BankAccount(1111, "vinna", 1000);
+      const b2 = new BankAccount(2222, "barani", 300);
+
+      console.log(b1);
+      console.log(b1.getaccountinfo());
+
+      console.log(b2.withdraw(1000));
+      console.log(b1.withdraw(500));
+    </script>
+  </body>
+</html>
